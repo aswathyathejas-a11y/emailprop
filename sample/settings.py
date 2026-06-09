@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-q#qofz2*qqa@gxq%1^4kv3nt6if2d%n*c^)=)3(&@j7rrdn@$$
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+AUTH_USER_MODEL = 'sam.Customer'
+RAZORPAY_KEY_ID = "rzp_test_SN2KVaGDoF3Mdz"
+RAZORPAY_KEY_SECRET = "e180zkNhC8ks54aeD0FuU9am"
 
 
 # Application definition
@@ -38,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sam',
-    'rest_framework'
+    'rest_framework',
+    'payment'
 ]
 
 MIDDLEWARE = [
@@ -109,13 +113,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_USE_TLS=True
 EMAIL_PORT=587
-EMAIL_HOST_USER='aswathyathejas@gmail.com'
-EMAIL_HOST_PASSWORD='ffqt jzih xkxa mszq'
-# Internationalization
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER='heysoorya1@gmail.com'
+EMAIL_HOST_PASSWORD='ibot dfts yoke orsn'
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
